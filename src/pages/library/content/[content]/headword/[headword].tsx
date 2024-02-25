@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { ParsedUrlQuery } from "querystring";
 import { NextPage, GetStaticProps } from "next";
-import { kanaParams } from "@/utils/data";
+import { KanaParams } from "@/utils/data";
 
 // Components
 import NewAudioButton from "@/components/NewAudioButton";
@@ -32,7 +32,7 @@ const LibraryPage: NextPage<IProps> = ({ libraryData }) => {
 
 export const getStaticPaths = async () => {
   return {
-    paths: kanaParams,
+    paths: KanaParams,
     fallback: false, // true, false or "blocking"
   };
 };
